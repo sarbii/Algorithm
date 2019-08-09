@@ -1,0 +1,19 @@
+palindrome
+
+
+ c
+bool checkPalindrome(char * s) {
+    char *q = s + strlen(s) - 1;
+
+    while (q > s) {
+        if (*q-- != *s++)
+            return false;
+    }
+    return true;
+}
+
+
+c++
+bool checkPalindrome(string is) {
+    return is == string(is.rbegin(),is.rend());
+}
